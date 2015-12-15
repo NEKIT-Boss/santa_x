@@ -80,7 +80,10 @@ if (DEBUG):
 	
 #Uncomment stuff below, to really send mails
 mailer = ImageMailer()
-mailer.Connect("smtp.gmail.com", 587)
+
+PORT = 587 #Port of smtp server
+SMTP_SERVER = "smtp.gmail.com" #Smtp server to send from, adjust to your sender email
+mailer.Connect(SMTP_SERVER, PORT)
 
 #in auth file u enter your login and password for mail server(each from new line)
 AUTH_FILE_NAME = "auth"

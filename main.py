@@ -11,7 +11,7 @@ from m_Mailer import ImageMailer
 from m_Randomizer import Randomizer
 from m_PlayersPool import PlayersPool
 
-#Set to 0, to unable output info
+#Set to 0, to disable output info
 DEBUG = 1
 #Set to 1, for outside script testing
 TEST = 0

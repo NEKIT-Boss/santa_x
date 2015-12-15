@@ -53,10 +53,11 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-*.png
+result.png
 
 # PyBuilder
 target/
 
 auth
 names
+memes

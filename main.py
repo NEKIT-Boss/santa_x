@@ -1,6 +1,7 @@
 #!/usr/env/bin python
 # -*- coding: utf-8 -*-
 
+import os
 import sys
 import math
 import codecs
@@ -10,7 +11,9 @@ from m_Mailer import ImageMailer
 from m_Randomizer import Randomizer
 from m_PlayersPool import PlayersPool
 
+#Set to 0, to unable output info
 DEBUG = 1
+#Set to 1, for outside script testing
 TEST = 0
 
 if ( len(sys.argv) ) < 2:
@@ -79,16 +82,20 @@ if (DEBUG):
 			print "Never lucky"
 	
 #Uncomment stuff below, to really send mails
-mailer = ImageMailer()
+# mailer = ImageMailer()
 
-PORT = 587 #Port of smtp server
-SMTP_SERVER = "smtp.gmail.com" #Smtp server to send from, adjust to your sender email
-mailer.Connect(SMTP_SERVER, PORT)
+# PORT = 587 #Port of smtp server
+# SMTP_SERVER = "smtp.gmail.com" #Smtp server to send from, adjust to your sender email
+# mailer.Connect(SMTP_SERVER, PORT)
 
-#in auth file u enter your login and password for mail server(each from new line)
-AUTH_FILE_NAME = "auth"
-auth_file_content = codecs.open(AUTH_FILE_NAME, "r", "utf-8").readlines()
-mailer.Auth(*auth_file_content)
+# #in auth file u enter your login and password for mail server(each from new line)
+# AUTH_FILE_NAME = "auth"
+# if (not os.path.exists(AUTH_FILE_NAME)):
+# 	print "Auth file does not exist"
+# 	sys.exit(1)
+	
+# auth_file_content = codecs.open(AUTH_FILE_NAME, "r", "utf-8").readlines()
+# mailer.Auth(auth_file_content[0], auth_file_content[1])
 
 # for santa_id, reciever_id in enumerate(randomizer.Santas):
 # 	sender_email = players_pool[santa_id].Email.encode("utf-8")

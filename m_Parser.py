@@ -1,8 +1,6 @@
 #!/usr/env/bin python
 # -*- coding: utf-8 -*-
 
-from m_NamesTable import NamesTable
-
 import os
 import re
 import codecs

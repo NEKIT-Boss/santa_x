@@ -93,5 +93,3 @@ mailer.Auth(*auth_file_content)
 # 	reciever_name = players_pool[reciever_id].Name.encode("utf-8")
 	
 # 	mailer.SendMail(sender_email, santa_name, reciever_name)
-
-mailer.SendMail("ne_kit@mail.ua", "Никита", "Николай")
